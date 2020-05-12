@@ -1,0 +1,84 @@
+<pathsConfigs>
+<!--idConfig = proximityValues:comingFromValue:gointToValue -->
+<!--Rotation is counter-clockwise -->
+	<!--Block 1 -->
+	<configuration idConfig = "10" pathIndex = "0" rotation = "180"/>
+	<configuration idConfig = "11" pathIndex = "0" rotation = "0"/>
+	
+	<!--Block 2 -->
+	<configuration idConfig = "20" pathIndex = "0" rotation = "90"/>	
+	<configuration idConfig = "21" pathIndex = "0" rotation = "-90"/>
+	
+	<!--Block 3 -->
+	<configuration idConfig = "300" pathIndex = "0" rotation = "180"/>
+	<configuration idConfig = "301" pathIndex = "2" rotation = "180"/>
+	<configuration idConfig = "302" pathIndex = "1" rotation = "180"/>
+	
+	<configuration idConfig = "310" pathIndex = "0" rotation = "0"/>
+	<configuration idConfig = "311" pathIndex = "1" rotation = "0"/>
+	<configuration idConfig = "312" pathIndex = "2" rotation = "0"/>
+	
+	<configuration idConfig = "320" pathIndex = "1" rotation = "90"/>
+	<configuration idConfig = "321" pathIndex = "2" rotation = "90"/>
+	<configuration idConfig = "322" pathIndex = "0" rotation = "90"/>
+	
+	<configuration idConfig = "330" pathIndex = "2" rotation = "270"/>
+	<configuration idConfig = "331" pathIndex = "1" rotation = "-90"/>
+	<configuration idConfig = "332" pathIndex = "0" rotation = "-90"/>
+	
+	<!--Block 4 -->	
+	<configuration idConfig = "40" pathIndex = "1" rotation = "180"/>
+	<configuration idConfig = "41" pathIndex = "2" rotation = "270"/>
+	
+	<!--Block 5 -->	
+	<configuration idConfig = "50" pathIndex = "2" rotation = "180"/>
+	<configuration idConfig = "51" pathIndex = "1" rotation = "90"/>
+	
+	<!--Block 6 -->	
+	<configuration idConfig = "60" pathIndex = "1" rotation = "0"/>
+	<configuration idConfig = "61" pathIndex = "2" rotation = "90"/>
+	
+	<!--Block 7 -->
+	<configuration idConfig = "70" pathIndex = "2" rotation = "0"/>	
+	<configuration idConfig = "71" pathIndex = "1" rotation = "-90"/>
+	
+	<!--Block 8 -->	
+	<configuration idConfig = "800" pathIndex = "0" rotation = "180"/>
+	<configuration idConfig = "801" pathIndex = "2" rotation = "180"/>
+	
+	<configuration idConfig = "810" pathIndex = "0" rotation = "0"/>	
+	<configuration idConfig = "811" pathIndex = "1" rotation = "0"/>	
+
+	<configuration idConfig = "820" pathIndex = "1" rotation = "90"/>
+	<configuration idConfig = "821" pathIndex = "2" rotation = "90"/>	
+	
+	<!--Block 9 -->	
+	<configuration idConfig = "900" pathIndex = "1" rotation = "0"/>
+	<configuration idConfig = "901" pathIndex = "2" rotation = "0"/>
+	
+	<configuration idConfig = "910" pathIndex = "2" rotation = "90"/>
+	<configuration idConfig = "911" pathIndex = "0" rotation = "90"/>
+	
+	<configuration idConfig = "920" pathIndex = "1" rotation = "-90"/>
+	<configuration idConfig = "921" pathIndex = "0" rotation = "-90"/>
+	
+	<!--Block 10 -->	
+	<configuration idConfig = "1000" pathIndex = "0" rotation = "180"/>
+	<configuration idConfig = "1001" pathIndex = "1" rotation = "180"/>
+	
+	<configuration idConfig = "1010" pathIndex = "0" rotation = "0"/>	
+	<configuration idConfig = "1011" pathIndex = "2" rotation = "0"/>	
+	
+	<configuration idConfig = "1020" pathIndex = "2" rotation = "270"/>
+	<configuration idConfig = "1021" pathIndex = "1" rotation = "-90"/>
+	
+	<!--Block 11 -->	
+	<configuration idConfig = "1100" pathIndex = "2" rotation = "180"/>
+	<configuration idConfig = "1101" pathIndex = "1" rotation = "180"/>
+	
+	<configuration idConfig = "1110" pathIndex = "1" rotation = "90"/>
+	<configuration idConfig = "1111" pathIndex = "0" rotation = "90"/>
+	
+	<configuration idConfig = "1120" pathIndex = "2" rotation = "-90"/>
+	<configuration idConfig = "1121" pathIndex = "0" rotation = "-90"/>
+</pathsConfigs>

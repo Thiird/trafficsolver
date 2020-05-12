@@ -1,0 +1,23 @@
+<collisionData>
+<!-- idCollision = [current vehicle comingFrom,goingTo][other vehicle comingFrom,goingTo]-->
+<!-- fPathLen = firstPathLength |-| sPathLen = secondPathLength -->
+	<!-- CU = 01 -->
+	<collision idCollision = "0103" fPathLen = "0" sPathLen = "0"/>
+	<collision idCollision = "0113" fPathLen = "0.25" sPathLen = "1.02"/>
+	<collision idCollision = "0121" fPathLen = "0.78" sPathLen = "0.84"/>
+	<collision idCollision = "0123" fPathLen = "0.24" sPathLen = "0.75"/>
+	<collision idCollision = "0130" fPathLen = "0.95" sPathLen = "0.25"/>
+	<collision idCollision = "0131" fPathLen = "0.80" sPathLen = "0.26"/>
+	<collision idCollision = "0132" fPathLen = "0.43" sPathLen = "0.23"/>	
+	
+	<collision idCollision = "0210" fPathLen = "1.0" sPathLen = "0.23"/>
+	<collision idCollision = "0212" fPathLen = "1.18" sPathLen = "0.31"/>
+	<collision idCollision = "0213" fPathLen = "0.24" sPathLen = "1.0"/>
+	<collision idCollision = "0221" fPathLen = "0.5" sPathLen = "0.74"/>
+	<collision idCollision = "0223" fPathLen = "0.24" sPathLen = "0.73"/>
+	<collision idCollision = "0230" fPathLen = "0.75" sPathLen = "0.5"/>
+	<collision idCollision = "0232" fPathLen = "1.0" sPathLen = "0.72"/>	
+	
+	<collision idCollision = "0313" fPathLen = "0.32" sPathLen = "1.20"/>
+	<collision idCollision = "0323" fPathLen = "0.32" sPathLen = "0.93"/>
+</collisionData>

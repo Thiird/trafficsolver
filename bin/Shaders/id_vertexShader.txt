@@ -1,0 +1,25 @@
+#version 400 core
+
+in vec3 position;
+in vec2 textureCoords;
+in vec3 normal;
+in mat4 transformationMatrix; //Entity transformations, also called modelMatrix
+in vec3 overlayColor;
+in float alpha;
+in vec3 id;
+
+out vec3 out_id;
+
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+
+void main(void)
+{//This shader does nothing
+
+	//Computing vertex position
+	vec4 worldPosition = transformationMatrix * vec4(position,1.0); // Position of the entity after it has moved from its original position
+	vec4 positionRelativeToCam = viewMatrix * worldPosition; //Position of the entity after the camera has moved
+	gl_Position =  projectionMatrix * positionRelativeToCam; //Position after the camera projectionMatrix has been applied	
+	
+	out_id = id;
+}

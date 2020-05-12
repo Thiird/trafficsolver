@@ -1,0 +1,45 @@
+#version 400 core
+
+in vec3 position;
+
+out vec3 colour;
+out float visibility;
+
+uniform mat4 transformationMatrix;
+uniform mat4 projectionMatrix;
+uniform mat4 viewMatrix;
+uniform vec3 camPos;
+
+const float density = 0.007;
+const float gradient = 1.5;
+
+float minDistance = 2.0;
+float maxDistance = 25;
+
+float maxPtSize = 6.0;
+
+float distPercentage(float maxDist, float minDist, float value) 
+{
+	return ((value - minDist) * 100) / (maxDist - minDist);
+}
+
+void main(void)
+{
+	vec4 worldPosition = transformationMatrix * vec4(position,1.0);
+	vec4 positionRelativeToCam = viewMatrix * worldPosition;
+	gl_Position =  projectionMatrix * positionRelativeToCam;
+	
+	float distance = length(positionRelativeToCam.xyz);
+	visibility = exp(-pow((distance*density),gradient));
+	
+	visibility = clamp(visibility,0.0,1.0);
+	
+	//Compute point size
+	float camDistFromPt = sqrt(pow(camPos.x - gl_Position.x, 2) + pow(camPos.y - gl_Position.y, 2) + pow(camPos.z - gl_Position.z,2));	
+			
+	gl_PointSize = maxPtSize * ((100.0 - distPercentage(maxDistance, minDistance, camDistFromPt))/100.0);	
+	
+	//Calculate color (in GLSL color is expressed in range 0-1)
+	vec3 color = vec3(250,200,200);
+	colour = color/255.0;
+}

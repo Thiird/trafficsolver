@@ -1,0 +1,15 @@
+<directionsToPathsIndices>
+<!--Starting from "coming from South, going west", then continuing in clock-wise order-->
+	<path directionValues = "13" pathId = "2"/>
+	<path directionValues = "10" pathId = "0"/>
+	<path directionValues = "12" pathId = "1"/>
+	<path directionValues = "30" pathId = "2"/>
+	<path directionValues = "32" pathId = "0"/>
+	<path directionValues = "31" pathId = "1"/>
+	<path directionValues = "01" pathId = "0"/>
+	<path directionValues = "03" pathId = "1"/>
+	<path directionValues = "02" pathId = "2"/>
+	<path directionValues = "21" pathId = "2"/>
+	<path directionValues = "23" pathId = "0"/>
+	<path directionValues = "20" pathId = "1"/>
+</directionsToPathsIndices>

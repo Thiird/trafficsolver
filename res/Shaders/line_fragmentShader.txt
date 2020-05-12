@@ -1,0 +1,13 @@
+#version 400 core
+
+in vec3 colour;
+in float visibility;
+
+out vec4 out_Color;
+uniform vec3 bgColor;
+
+void main(void)
+{
+	vec3 lineColor = vec3(0,0,0);
+	out_Color = vec4(lineColor,1.0);
+}

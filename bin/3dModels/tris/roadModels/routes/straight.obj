@@ -1,0 +1,10 @@
+# File exported by Houdini 15.5.717 (www.sidefx.com)
+# 2 points
+# 2 vertices
+# 1 primitives
+# Bounds: [0.249974996, 0.423076987, -0.5] to [0.249974996, 0.423076987, 0.5]
+g 
+v 0.249974996 0.423076987 0.5
+v 0.249974996 0.423076987 -0.5
+g 
+l 1 2

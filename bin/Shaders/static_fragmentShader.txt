@@ -1,0 +1,74 @@
+#version 400 core
+
+//Attributes coming from vertex shader
+in vec2 pass_textureCoords;
+in vec3 surfaceNormal;
+in vec3 toLightVector;
+in vec3 toCameraVector;
+in vec3 out_overlayColor; //Color overlay
+in float out_alpha;
+
+//Output color (in the fragment there is only one output color)
+out vec4 out_Color;
+
+//Attributes coming from the JAVA code
+uniform sampler2D textureSampler;
+uniform vec3 lightColour;
+uniform float shineDamper;
+uniform float reflectivity;
+uniform vec3 bgColor;	
+
+vec3 normalizeColor(vec3 toNormalize)
+{
+	vec3 outColor = vec3(0,0,0);
+	
+	//low2 + (value - low1) * (high2 - low2) / (high1 - low1);
+	outColor.x = 0 + (toNormalize.x - 1) * (1 - 0) / (255 - 0);
+	outColor.y = 0 + (toNormalize.y - 1) * (1 - 0) / (255 - 0);
+	outColor.z = 0 + (toNormalize.z - 1) * (1 - 0) / (255 - 0);
+	
+	return outColor;
+}
+
+vec3 getColor(vec3 base, vec3 overlay, float alpha)
+{
+	//init output value
+	vec3 outColor = vec3(0,0,0);
+	
+	float step;
+	
+	//Calculate red component
+	step = -((base.x - overlay.x));	
+	outColor.x = base.x + (step*alpha);
+	
+	//Calculate green component
+	step = -((base.y - overlay.y));	
+	outColor.y = base.y + (step*alpha);
+	
+	//Calculate blue component
+	step = -((base.z - overlay.z));
+	outColor.z = base.z + (step*alpha);
+	
+    return outColor;
+}
+
+void main(void)
+{					
+	vec3 unitNormal = normalize(surfaceNormal);
+	vec3 unitLightVector = normalize(toLightVector);
+	
+	float nDot1 = dot(unitNormal,unitLightVector);
+	
+	//Fit range
+	float brightness = max(nDot1,0.1);
+	
+	vec3 diffuse = brightness * lightColour;
+	
+	vec4 textureColor = texture(textureSampler,pass_textureCoords);		
+	
+	vec4 baseColor = vec4(diffuse,1.0) * textureColor;
+			
+	vec3 overlayColor = normalizeColor(out_overlayColor);
+	out_Color = vec4(getColor(baseColor.xyz,overlayColor,out_alpha),1.0);		
+	
+}
