@@ -1,5 +1,0 @@
-<pathIndexToPathInfo>
-	<pathToInfo id = "0" filePath = "roadModels/routes/straight" totLenght = "1.0"/>
-	<pathToInfo id = "1" filePath = "roadModels/routes/turn_small" totLenght = "0.40328"/>
-	<pathToInfo id = "2" filePath = "roadModels/routes/turn_large" totLenght = "1.27419"/>
-</pathIndexToPathInfo>

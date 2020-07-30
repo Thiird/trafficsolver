@@ -1,8 +1,0 @@
-<roadBlocksMapping>
-	<roadBlock index = "0" name = "straight" description = "Straight road"/>
-	<roadBlock index = "1" name = "turn" description = "90° turn"/>
-	<roadBlock index = "2" name = "t_intersection" description = "T intersection"/>
-	<roadBlock index = "3" name = "4_way_intersection" description = "4 way intersection"/>
-	<roadBlock index = "4" name = "null" description = "Not road"/>
-	<roadBlock index = "5" name = "obstacle" description = "Obstacle"/>
-</roadBlocksMapping>
