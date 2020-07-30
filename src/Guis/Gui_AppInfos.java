@@ -1,6 +1,8 @@
 package Guis;
 
 import java.awt.Color;
+import java.awt.Cursor;
+import java.awt.Desktop;
 import java.awt.Font;
 import java.awt.Toolkit;
 import java.awt.Window.Type;
@@ -8,6 +10,9 @@ import java.awt.datatransfer.Clipboard;
 import java.awt.datatransfer.StringSelection;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
@@ -50,9 +55,9 @@ public class Gui_AppInfos
 		JLabel lblTrafficSolverID = new JLabel();
 		lblTrafficSolverID.setFont(new Font("Tahoma", Font.PLAIN, 15));
 		lblTrafficSolverID.setBackground(Color.WHITE);
-		lblTrafficSolverID.setBounds(12, 114, 453, 62);
+		lblTrafficSolverID.setBounds(12, 114, 453, 76);
 		lblTrafficSolverID.setText(
-				"<html>Traffic Solver is written in Java, with the LWJGL 2 OpenGL API.  <br>   Its purpose is to prove that its possible to solve traffic congestion with a software architecture.<html>");
+				"<html>Traffic Solver is a software simulation of vehicles in a road network. <br> Its purpose is to show that it is possible to implement the basic road principles in a software simulation. <br> Written in Java, with the LWJGL 2 OpenGL API. <html>");
 		mainFrame.getContentPane().add(lblTrafficSolverID);
 
 		JLabel lblappLogo = new JLabel("\"app logo\"");
@@ -94,38 +99,48 @@ public class Gui_AppInfos
 		lblVimeoLogo.setBounds(17, 309, 20, 22);
 		mainFrame.getContentPane().add(lblVimeoLogo);
 
-		JLabel lblPresentationVideo = new JLabel("https://vimeo.com/414509171");
-		lblPresentationVideo.setToolTipText("Click to copy to clipboard");
-		lblPresentationVideo.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblPresentationVideo.setBounds(47, 309, 200, 22);
-		lblPresentationVideo.addMouseListener(new MouseAdapter()
-		{
-			public void mouseClicked(MouseEvent e)
-			{
-				clipboard.setContents(new StringSelection(lblPresentationVideo.getText()), null);
-			}
-		});
-		mainFrame.getContentPane().add(lblPresentationVideo);
-
 		JLabel txtpnThanksToThinmatrix = new JLabel();
 		txtpnThanksToThinmatrix.setText("Thanks to ThinMatrix for creating a YouTube series about LWJGL 2.\r\n");
 		txtpnThanksToThinmatrix.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		txtpnThanksToThinmatrix.setBounds(11, 182, 454, 22);
+		txtpnThanksToThinmatrix.setBounds(12, 195, 454, 22);
 		mainFrame.getContentPane().add(txtpnThanksToThinmatrix);
 
 		JLabel lblDevTimeFrame = new JLabel();
 		lblDevTimeFrame.setToolTipText("First big project");
 		lblDevTimeFrame.setText("Developing time-frame was October 2017 - May 2020.");
 		lblDevTimeFrame.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblDevTimeFrame.setBounds(12, 211, 360, 22);
+		lblDevTimeFrame.setBounds(13, 221, 360, 22);
 		mainFrame.getContentPane().add(lblDevTimeFrame);
 
 		JLabel lblAndYou = new JLabel();
 		lblAndYou.setToolTipText("When they say \"and you\" at the end of the game credits :')");
 		lblAndYou.setText("Thank You for checking out Traffic Solver!");
 		lblAndYou.setFont(new Font("Tahoma", Font.PLAIN, 15));
-		lblAndYou.setBounds(12, 241, 291, 22);
+		lblAndYou.setBounds(12, 249, 291, 22);
 		mainFrame.getContentPane().add(lblAndYou);
+
+		JLabel lblPresentationVideo = new JLabel();
+		lblPresentationVideo.setFont(new Font("Tahoma", Font.PLAIN, 15));
+		lblPresentationVideo.setText("<html><a href=''>Presentation video</a></html>");
+		lblPresentationVideo.setForeground(Color.BLUE.darker());
+		lblPresentationVideo.setCursor(Cursor.getPredefinedCursor(Cursor.HAND_CURSOR));
+		lblPresentationVideo.addMouseListener(new MouseAdapter()
+		{
+			@Override
+			public void mouseClicked(MouseEvent e)
+			{
+				try
+				{
+					Desktop.getDesktop().browse(new URI("https://vimeo.com/414509171"));
+				}
+				catch (IOException | URISyntaxException e1)
+				{
+					e1.printStackTrace();
+				}
+			}
+		});
+		lblPresentationVideo.setBounds(47, 311, 123, 23);
+		mainFrame.getContentPane().add(lblPresentationVideo);
 	}
 
 	public void setVisible(boolean isVisible)

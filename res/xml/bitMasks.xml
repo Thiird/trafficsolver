@@ -1,4 +1,4 @@
-<bitMasking>
+<bitMasks>
 <!--Proximity = NSEW:COMING_FROM value:GOING_TO value-->
 <!--index = blockIndex + 'id' value (used to diversify blocks that use same 3d model), may be 1 or 2 digits-->
 	<!--Block -1 -->
@@ -87,4 +87,4 @@
 	
 	<block proximity = "1011:3:0" index = "1120" block = "2" rotation = "180"/>
 	<block proximity = "1011:3:2" index = "1121" block = "2" rotation = "180"/>
-</bitMasking>
+</bitMasks>

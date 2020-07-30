@@ -502,7 +502,7 @@ public class RoadManager
 		index = RoadData.bitMasksToIndex.get(Integer.toString(proximityArray[0]) + Integer.toString(proximityArray[1]) + Integer.toString(proximityArray[2]) + Integer.toString(proximityArray[3]) + ":"
 				+ comingFromValue + ":" + goingToValue);
 
-		//Set value into bitMap;
+		//Set value into bitMap
 		RoadData.bitMap[currentPos[1]][currentPos[0]] = Integer.parseInt(index);
 
 		RoadData.routeIndexToConfigId.get(RoadData.routesIndex - 1)[blockIndex] = index;

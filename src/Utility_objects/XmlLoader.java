@@ -47,7 +47,7 @@ public class XmlLoader
 		HashMap<String, String[]> bitMasks = new HashMap<String, String[]>();
 
 		Document doc = loadXml("bitMasks");
-		NodeList nList = doc.getElementsByTagName("bitMasking");
+		NodeList nList = doc.getElementsByTagName("bitMasks");
 
 		Node node;
 		String[] value = new String[2];
@@ -79,8 +79,7 @@ public class XmlLoader
 		HashMap<String, String> bitMasksToIndex = new HashMap<String, String>();
 
 		Document doc = loadXml("bitMasks");
-
-		NodeList nList = doc.getElementsByTagName("bitMasking");
+		NodeList nList = doc.getElementsByTagName("bitMasks");
 
 		Node node;
 		String value;
