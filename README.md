@@ -1,4 +1,4 @@
-# trafficsolver
+# Traffic Solver
 TS simulates vehicles interactions in a road network.
 High-school project.
 
